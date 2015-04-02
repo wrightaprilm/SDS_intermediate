@@ -1690,18 +1690,11 @@ div#notebook {
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[50]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="k">def</span> <span class="nf">filter_name</span><span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-	<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">	functions have a special kind of comment called a docstring. It is denoted</span>
-<span class="sd">	with three quotes. These can be multi-line without including the quotes on </span>
-<span class="sd">	each line. These are just helpful comments at the novice level, but if you </span>
-<span class="sd">	plan to distribute code, are very important. See here for more: </span>
-<span class="sd">	http://www.pythonforbeginners.com/basics/python-docstrings </span>
-<span class="sd">	&quot;&quot;&quot;</span>
 
         <span class="n">positives</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">negatives</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1713,10 +1706,38 @@ In&nbsp;[]:
             <span class="k">else</span><span class="p">:</span> 
                 <span class="n">negatives</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
         <span class="k">return</span><span class="p">([</span><span class="n">positives</span><span class="p">,</span> <span class="n">negatives</span><span class="p">])</span>
-        
+<span class="n">filter_name</span> <span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>     
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_pyerr">
+<pre>
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">AssertionError</span>                            Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-50-4b4e17c84603&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">     11</span>                 negatives<span class="ansiyellow">.</span>append<span class="ansiyellow">(</span>letter<span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">     12</span>         <span class="ansigreen">return</span><span class="ansiyellow">(</span><span class="ansiyellow">[</span>positives<span class="ansiyellow">,</span> negatives<span class="ansiyellow">]</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">---&gt; 13</span><span class="ansiyellow"> </span>filter_name <span class="ansiyellow">(</span>last_name<span class="ansiyellow">,</span> key<span class="ansiyellow">)</span><span class="ansiyellow"></span>
+
+<span class="ansigreen">&lt;ipython-input-50-4b4e17c84603&gt;</span> in <span class="ansicyan">filter_name</span><span class="ansiblue">(last_name, key)</span>
+<span class="ansigreen">      5</span> <span class="ansired">#Regular comments can be embedded in the text after a pound sign.</span><span class="ansiyellow"></span><span class="ansiyellow"></span>
+<span class="ansigreen">      6</span>         <span class="ansigreen">for</span> letter <span class="ansigreen">in</span> last_name<span class="ansiyellow">:</span><span class="ansiyellow"></span>
+<span class="ansigreen">----&gt; 7</span><span class="ansiyellow">             </span><span class="ansigreen">assert</span> letter<span class="ansiyellow">.</span>isalpha<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">      8</span>             <span class="ansigreen">if</span> letter <span class="ansiyellow">==</span> key<span class="ansiyellow">:</span><span class="ansiyellow"></span>
+<span class="ansigreen">      9</span>                 positives<span class="ansiyellow">.</span>append<span class="ansiyellow">(</span>letter<span class="ansiyellow">)</span><span class="ansiyellow"></span>
+
+<span class="ansired">AssertionError</span>: </pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1724,37 +1745,62 @@ In&nbsp;[]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[2]:
+In&nbsp;[49]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">filter_name</span><span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-	<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">	functions have a special kind of comment called a docstring. It is denoted</span>
-<span class="sd">	with three quotes. These can be multi-line without including the quotes on </span>
-<span class="sd">	each line. These are just helpful comments at the novice level, but if you </span>
-<span class="sd">	plan to distribute code, are very important. See here for more: </span>
-<span class="sd">	http://www.pythonforbeginners.com/basics/python-docstrings </span>
-<span class="sd">	&quot;&quot;&quot;</span>
+<div class="highlight"><pre><span class="n">last_name</span> <span class="o">=</span> <span class="s">&#39;wr1ght&#39;</span>
+<span class="n">key</span> <span class="o">=</span> <span class="s">&#39;g&#39;</span>
+<span class="k">def</span> <span class="nf">filter_name</span><span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
 
         <span class="n">positives</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">negatives</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="c">#Regular comments can be embedded in the text after a pound sign.</span>
         <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">last_name</span><span class="p">:</span>
             <span class="k">try</span><span class="p">:</span>
-                <span class="n">letter</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="o">==</span> <span class="bp">True</span>
-                <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="n">key</span><span class="p">:</span>
+               <span class="k">print</span> <span class="nb">int</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+               <span class="k">print</span> <span class="s">&quot;this isn&#39;t a letter&quot;</span>
+               <span class="k">pass</span>
+            <span class="k">except</span><span class="p">:</span>
+               <span class="n">letter</span> <span class="o">=</span> <span class="n">letter</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> 
+               <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="n">key</span><span class="p">:</span>
                     <span class="n">positives</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
-                <span class="k">else</span><span class="p">:</span> 
+               <span class="k">else</span><span class="p">:</span> 
                     <span class="n">negatives</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
-            <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-                <span class="k">print</span> <span class="s">&quot;this isn&#39;t a letter&quot;</span>
-                <span class="k">pass</span>
+
         <span class="k">return</span><span class="p">([</span><span class="n">positives</span><span class="p">,</span> <span class="n">negatives</span><span class="p">])</span>
-        
+<span class="n">filter_name</span><span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>        
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+1
+this isn&apos;t a letter
+
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[49]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+[[&apos;g&apos;], [&apos;w&apos;, &apos;r&apos;, &apos;h&apos;, &apos;t&apos;]]
+</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -1772,18 +1818,11 @@ Or, if you&#39;re looking ahead, how does the below fix the issue?</p>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[53]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="k">def</span> <span class="nf">filter_name</span><span class="p">(</span><span class="n">filter_list</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-	<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">	functions have a special kind of comment called a docstring. It is denoted</span>
-<span class="sd">	with three quotes. These can be multi-line without including the quotes on </span>
-<span class="sd">	each line. These are just helpful comments at the novice level, but if you </span>
-<span class="sd">	plan to distribute code, are very important. See here for more: </span>
-<span class="sd">	http://www.pythonforbeginners.com/basics/python-docstrings </span>
-<span class="sd">	&quot;&quot;&quot;</span>
         <span class="n">positives</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">negatives</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="c">#Regular comments can be embedded in the text after a pound sign.</span>
@@ -1821,6 +1860,22 @@ In&nbsp;[]:
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+[&apos;w&apos;, &apos;r&apos;, &apos;h&apos;, &apos;t&apos;]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1845,6 +1900,21 @@ In&nbsp;[]:
 <span class="k">assert</span> <span class="n">myfunction</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">25</span>
 
 <span class="o">+</span> <span class="n">Write</span> <span class="n">a</span> <span class="n">test</span> <span class="n">that</span> <span class="n">would</span> <span class="n">ensure</span> <span class="n">the</span> <span class="nb">input</span> <span class="n">to</span> <span class="n">your</span> <span class="n">function</span> <span class="n">will</span> <span class="n">work</span> <span class="k">with</span> <span class="n">your</span> <span class="n">function</span><span class="o">.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre> 
 </pre></div>
 
 </div>

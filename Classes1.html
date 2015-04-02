@@ -1689,7 +1689,7 @@ div#notebook {
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[51]:
+In&nbsp;[1]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1796,7 +1796,7 @@ In&nbsp;[5]:
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-&lt;__main__.Coordinates at 0xb4a4f96c&gt;
+&lt;__main__.Coordinates at 0xb4aef82c&gt;
 </pre>
 </div>
 
@@ -1809,7 +1809,7 @@ In&nbsp;[5]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[52]:
+In&nbsp;[6]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1826,11 +1826,11 @@ In&nbsp;[52]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[53]:
+In&nbsp;[9]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">our_coords</span><span class="o">.</span><span class="n">date</span>
+<div class="highlight"><pre><span class="n">our_coords</span><span class="o">.</span><span class="n">lat</span>
 </pre></div>
 
 </div>
@@ -1842,12 +1842,123 @@ In&nbsp;[53]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[53]:</div>
+    Out[9]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-&apos;2014-10-27&apos;
+[43.661476,
+ 39.332604,
+ 45.703255,
+ 43.661476,
+ 39.166381,
+ 36.802151,
+ 37.808381,
+ 41.790113,
+ 41.744949,
+ 51.559882,
+ 42.727288,
+ 54.980095,
+ 53.523454,
+ 49.261715,
+ 39.32758,
+ 48.831673,
+ 42.359133,
+ 43.47013,
+ 44.632261,
+ 43.783551,
+ 53.948193,
+ 59.939959,
+ 40.808078,
+ 40.428267,
+ 37.875928,
+ 49.261715,
+ 37.8695,
+ 54.980095,
+ 34.141411,
+ 38.831513,
+ 51.757137,
+ 43.261328,
+ 38.648056,
+ 32.89533,
+ 34.227425,
+ 21.300662,
+ 55.945328,
+ 30.283599,
+ 49.261715,
+ 41.790113,
+ 45.417417,
+ 43.469128,
+ 49.261715,
+ 48.264934,
+ 43.647118,
+ 48.53698,
+ 40.808078,
+ 37.228384,
+ 49.261715,
+ -33.773636,
+ -37.825328,
+ 47.655965,
+ 37.875928,
+ 38.031441,
+ 33.900058,
+ 41.744949,
+ 22.3101,
+ 32.236358,
+ 51.524789,
+ -33.929492,
+ 53.467102,
+ 37.8695,
+ 53.478349,
+ 48.82629,
+ 39.291389,
+ 43.07718,
+ 52.33399,
+ 54.32707,
+ 39.07141,
+ 37.42949,
+ 37.875928,
+ 43.64712,
+ 51.759865,
+ 38.54926,
+ 36.00803,
+ 50.060833,
+ 36.00283,
+ 40.03131,
+ 42.388889,
+ 53.52345,
+ 50.937716,
+ 42.35076,
+ 41.789722,
+ 49.276765,
+ 32.887151,
+ 41.790113,
+ 42.3625,
+ 30.283599,
+ -43.523333,
+ 35.20859,
+ 59.939959,
+ 30.538978,
+ 39.166381,
+ 51.377743,
+ 37.228384,
+ 41.7408,
+ 41.70522,
+ 47.655,
+ 40.443322,
+ 44.968657,
+ 38.958455,
+ 32.30192,
+ 43.07718,
+ 41.66293,
+ 51.457971,
+ 43.468889,
+ 42.724085,
+ -34.919159,
+ 49.261111,
+ -37.9083,
+ 34.052778,
+ 41.526667]
 </pre>
 </div>
 
@@ -1869,7 +1980,7 @@ In&nbsp;[53]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[10]:
+In&nbsp;[8]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1885,7 +1996,7 @@ In&nbsp;[10]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[10]:</div>
+    Out[8]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -1913,12 +2024,12 @@ In&nbsp;[10]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[74]:
+In&nbsp;[11]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="k">class</span> <span class="nc">new_coords</span><span class="p">(</span><span class="n">Coordinates</span><span class="p">):</span>
-     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">print</span><span class="p">(</span><span class="s">&quot;initializing new class&quot;</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">num_of_workshops</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">num</span> <span class="o">=</span> <span class="n">num</span>
@@ -1941,7 +2052,7 @@ In&nbsp;[74]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[76]:
+In&nbsp;[12]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1974,7 +2085,7 @@ initializing new class
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[77]:
+In&nbsp;[14]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1990,7 +2101,7 @@ In&nbsp;[77]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[77]:</div>
+    Out[14]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -2119,7 +2230,7 @@ In&nbsp;[77]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[78]:
+In&nbsp;[15]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2135,7 +2246,7 @@ In&nbsp;[78]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[78]:</div>
+    Out[15]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -2150,23 +2261,18 @@ In&nbsp;[78]:
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
-In&nbsp;[]:
 </div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="c">#Chalenge</span>
-
-<span class="o">+</span> <span class="n">Create</span> <span class="n">a</span> <span class="k">class</span> <span class="nc">called</span> <span class="n">student</span><span class="o">.</span> <span class="n">What</span> <span class="ow">is</span> <span class="n">information</span> <span class="n">an</span> <span class="n">instructor</span> <span class="n">might</span> <span class="n">want</span> <span class="n">about</span> <span class="n">a</span> <span class="n">student</span><span class="err">?</span> <span class="n">Code</span> <span class="n">this</span> <span class="n">information</span> <span class="k">as</span> <span class="n">an</span> <span class="n">attribute</span>
-<span class="o">+</span> <span class="n">Create</span> <span class="n">subclasses</span> <span class="k">for</span> <span class="n">individual</span> <span class="n">students</span><span class="o">.</span> <span class="n">What</span> <span class="n">might</span> <span class="n">be</span> <span class="n">personalized</span> <span class="n">info</span> <span class="n">an</span> <span class="n">instructor</span> <span class="n">would</span> <span class="n">want</span> <span class="n">about</span> <span class="n">a</span> <span class="n">student</span><span class="err">?</span>
-</pre></div>
-
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="chalenge">Chalenge</h1>
+<ul>
+<li>Create a class called student. What is information an instructor might want about a student? Code this information as an attribute</li>
+<li>Create subclasses for individual students. What might be personalized info an instructor would want about a student?</li>
+</ul>
 </div>
 </div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">

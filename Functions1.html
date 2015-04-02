@@ -1747,12 +1747,11 @@ In&nbsp;[6]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">last_name</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;w&#39;</span><span class="p">,</span><span class="s">&#39;r&#39;</span><span class="p">,</span><span class="s">&#39;i&#39;</span><span class="p">,</span><span class="s">&#39;g&#39;</span><span class="p">,</span><span class="s">&#39;h&#39;</span><span class="p">,</span><span class="s">&#39;t&#39;</span><span class="p">]</span>
-<span class="n">key</span> <span class="o">=</span> <span class="s">&#39;g&#39;</span>
-
-<span class="k">def</span> <span class="nf">filter_name</span><span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">filter_name</span><span class="p">():</span>
 	<span class="n">positives</span> <span class="o">=</span> <span class="p">[]</span>
 	<span class="n">negatives</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">last_name</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;w&#39;</span><span class="p">,</span><span class="s">&#39;r&#39;</span><span class="p">,</span><span class="s">&#39;i&#39;</span><span class="p">,</span><span class="s">&#39;g&#39;</span><span class="p">,</span><span class="s">&#39;h&#39;</span><span class="p">,</span><span class="s">&#39;t&#39;</span><span class="p">]</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="s">&#39;g&#39;</span>
 	<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">last_name</span><span class="p">:</span>
 		<span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="n">key</span><span class="p">:</span>
 			<span class="n">positives</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
@@ -1772,8 +1771,35 @@ In&nbsp;[6]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>That last line is called a return statement. It tells Python what we&#39;d like to receive back. This is different than a print statement, as we are creating an object that can be used by other functions, not simply displaying information. The return statement ends a function.</p>
+<p>But who can see something bad about how this code is written? </p>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[1]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">last_name</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;w&#39;</span><span class="p">,</span><span class="s">&#39;r&#39;</span><span class="p">,</span><span class="s">&#39;i&#39;</span><span class="p">,</span><span class="s">&#39;g&#39;</span><span class="p">,</span><span class="s">&#39;h&#39;</span><span class="p">,</span><span class="s">&#39;t&#39;</span><span class="p">]</span>
+<span class="n">key</span> <span class="o">=</span> <span class="s">&#39;g&#39;</span>
+<span class="k">def</span> <span class="nf">filter_name</span><span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+	<span class="n">positives</span> <span class="o">=</span> <span class="p">[]</span>
+	<span class="n">negatives</span> <span class="o">=</span> <span class="p">[]</span>
+    
+	<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">last_name</span><span class="p">:</span>
+		<span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="n">key</span><span class="p">:</span>
+			<span class="n">positives</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+		<span class="k">else</span><span class="p">:</span> 
+			<span class="n">negatives</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+	<span class="k">return</span><span class="p">([</span><span class="n">positives</span><span class="p">,</span> <span class="n">negatives</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">

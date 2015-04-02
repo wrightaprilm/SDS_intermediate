@@ -1693,10 +1693,167 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Looking at our previous code, where could we put a precondition? 
-What have we previously written that is a post condition?
-Try to intentionally fail the pre-condition?
-If we&#39;ve passed the precondition, could we fail this post-condition?</p>
+<p>Looking at our previous code, where could we put a precondition? </p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">filter_name</span><span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="n">positives</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">negatives</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c">#Regular comments can be embedded in the text after a pound sign.        </span>
+        <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">last_name</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="n">key</span><span class="p">:</span>
+                        <span class="n">positives</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span> 
+                        <span class="n">negatives</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+        <span class="k">return</span><span class="p">([</span><span class="n">positives</span><span class="p">,</span> <span class="n">negatives</span><span class="p">])</span>
+<span class="k">print</span> <span class="n">filter_name</span><span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[6]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">last_name</span> <span class="o">=</span> <span class="s">&#39;wright&#39;</span>
+<span class="n">key</span> <span class="o">=</span> <span class="s">&#39;g&#39;</span>
+
+
+<span class="k">def</span> <span class="nf">filter_name</span><span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">last_name</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span>
+        <span class="k">assert</span> <span class="n">key</span><span class="o">.</span><span class="n">isalpha</span>
+        <span class="n">positives</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">negatives</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c">#Regular comments can be embedded in the text after a pound sign.        </span>
+        <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">last_name</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="n">key</span><span class="p">:</span>
+                        <span class="n">positives</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span> 
+                        <span class="n">negatives</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+        <span class="k">return</span><span class="p">([</span><span class="n">positives</span><span class="p">,</span> <span class="n">negatives</span><span class="p">])</span>
+<span class="k">print</span> <span class="n">filter_name</span><span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_pyerr">
+<pre>
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">AttributeError</span>                            Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-6-7c8475024762&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">     15</span>                         negatives<span class="ansiyellow">.</span>append<span class="ansiyellow">(</span>letter<span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">     16</span>         <span class="ansigreen">return</span><span class="ansiyellow">(</span><span class="ansiyellow">[</span>positives<span class="ansiyellow">,</span> negatives<span class="ansiyellow">]</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">---&gt; 17</span><span class="ansiyellow"> </span><span class="ansigreen">print</span> filter_name<span class="ansiyellow">(</span>last_name<span class="ansiyellow">,</span> key<span class="ansiyellow">)</span><span class="ansiyellow"></span>
+
+<span class="ansigreen">&lt;ipython-input-6-7c8475024762&gt;</span> in <span class="ansicyan">filter_name</span><span class="ansiblue">(last_name, key)</span>
+<span class="ansigreen">      5</span> <span class="ansigreen">def</span> filter_name<span class="ansiyellow">(</span>last_name<span class="ansiyellow">,</span> key<span class="ansiyellow">)</span><span class="ansiyellow">:</span><span class="ansiyellow"></span>
+<span class="ansigreen">      6</span>         <span class="ansigreen">assert</span> len<span class="ansiyellow">(</span>last_name<span class="ansiyellow">)</span> <span class="ansiyellow">&gt;</span> <span class="ansicyan">1</span><span class="ansiyellow"></span>
+<span class="ansigreen">----&gt; 7</span><span class="ansiyellow">         </span><span class="ansigreen">assert</span> key<span class="ansiyellow">.</span>isalpha<span class="ansiyellow"></span>
+<span class="ansigreen">      8</span>         positives <span class="ansiyellow">=</span> <span class="ansiyellow">[</span><span class="ansiyellow">]</span><span class="ansiyellow"></span>
+<span class="ansigreen">      9</span>         negatives <span class="ansiyellow">=</span> <span class="ansiyellow">[</span><span class="ansiyellow">]</span><span class="ansiyellow"></span>
+
+<span class="ansired">AttributeError</span>: &apos;int&apos; object has no attribute &apos;isalpha&apos;</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Try to intentionally fail the pre-condition</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Add a post-condition</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[7]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">last_name</span> <span class="o">=</span> <span class="s">&#39;wright&#39;</span>
+<span class="n">key</span> <span class="o">=</span> <span class="s">&#39;g&#39;</span>
+
+
+<span class="k">def</span> <span class="nf">filter_name</span><span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">last_name</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span>
+        <span class="k">assert</span> <span class="n">key</span><span class="o">.</span><span class="n">isalpha</span>
+        <span class="n">positives</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">negatives</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c">#Regular comments can be embedded in the text after a pound sign.        </span>
+        <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">last_name</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="n">key</span><span class="p">:</span>
+                        <span class="n">positives</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span> 
+                        <span class="n">negatives</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">negatives</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">positives</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+        <span class="k">return</span><span class="p">([</span><span class="n">positives</span><span class="p">,</span> <span class="n">negatives</span><span class="p">])</span>
+<span class="k">print</span> <span class="n">filter_name</span><span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+[[&apos;g&apos;], [&apos;w&apos;, &apos;r&apos;, &apos;i&apos;, &apos;h&apos;, &apos;t&apos;]]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If we have passed our pre-condition, is it possible to fail the post-condition?</p>
 </div>
 </div>
 </div>
@@ -1706,9 +1863,9 @@ If we&#39;ve passed the precondition, could we fail this post-condition?</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>From Software Carpentry&#39;s materials on testing: </p>
-<p>```Most good programmers follow two rules when adding assertions to their code. The first is, &quot;fail early, fail often&quot;. The greater the distance between when and where an error occurs and when it&#39;s noticed, the harder the error will be to debug, so good code catches mistakes as early as possible.</p>
+<p>&#39;&#39;&#39;Most good programmers follow two rules when adding assertions to their code. The first is, &quot;fail early, fail often&quot;. The greater the distance between when and where an error occurs and when it&#39;s noticed, the harder the error will be to debug, so good code catches mistakes as early as possible.</p>
 <p>The second rule is, &quot;turn bugs into assertions or tests&quot;. If you made a mistake in a piece of code, the odds are good that you have made other mistakes nearby, or will make the same mistake (or a related one) the next time you change it. Writing assertions to check that you haven&#39;t regressed (i.e., haven&#39;t re-introduced an old problem) can save a lot of time in the long run, and helps to warn people who are reading the code (including your future self) that this bit is tricky.
-```</p>
+&#39;&#39;&#39;</p>
 </div>
 </div>
 </div>
@@ -1718,19 +1875,97 @@ If we&#39;ve passed the precondition, could we fail this post-condition?</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="challenge">Challenge</h1>
-<p>+Suppose you are writing a function called average that calculates the average of the numbers in a list. What pre-conditions and post-conditions would you write for it? Compare your answer to your neighbor&#39;s: can you think of a function that will past your tests but not theirs or vice versa?</p>
-<p>+Explain in words what the assertions in this code check, and for each one, give an example of input that will make that assertion fail.</p>
-<pre><code>def running(values):
-assert len(values) &gt; 0
-result = [values[0]]
-for v in values[1:]:
-assert result[-1] &gt;= 0
-result.append(result[-1] + v)
-assert result[-1] &gt;= result[0]
-return result
-</code></pre>
+<p>Suppose you are writing a function called average that calculates the average of the numbers in a list. What pre-conditions and post-conditions would you write for it? Compare your answer to your neighbor&#39;s: can you think of a function that will past your tests but not theirs or vice versa?</p>
+<p>Explain in words what the assertions in this code check, and for each one, give an example of input that will make that assertion fail:</p>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[17]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="k">def</span> <span class="nf">running</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
+    
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="k">assert</span> <span class="n">result</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">v</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">result</span>
+<span class="n">running</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+[1, 3]
+[1, 3, 6]
+[1, 3, 6, 10]
+[1, 3, 6, 10, 15]
+[1, 3, 6, 10, 15]
+
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[17]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+[1, 3, 6, 10, 15]
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[14]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
     </div>
   </div>

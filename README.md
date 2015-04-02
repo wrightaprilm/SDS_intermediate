@@ -4,10 +4,10 @@ If you plan to use your own computer, please see the set-up instructions [here](
 
 |Time | Topic |Other | 
 |-----|-------|------|
-|2-2:15 | Welcome, Orientation || 
-|2:15-2:45 | Functions 1 | | 
-|2:45-3:15 | Functions 2 | | 
-|3:15-3:45 | Function 3 |[Scripts as modules](https://github.com/wrightaprilm/SDS_intermediate/blob/master/04-python_scripts_as_modules.md) | 
-|3:45-4:00 | Testing 1 | | 
-|4 - 4:30 | Testing 2| | 
-|4:30 - 5 | Classes | | 
+|9:30-9:45 | Welcome, Orientation || 
+|9:45-10:15 | Functions 1 | | 
+|10:20-10:50 | Functions 2 | | 
+|11:00-11:30 | Function 3 |[Scripts as modules](https://github.com/wrightaprilm/SDS_intermediate/blob/master/04-python_scripts_as_modules.md) | 
+|11:40-12:00 | Testing 1 | [Data as read-only](https://github.com/wrightaprilm/SDS_intermediate/blob/master/check_dir.py)| 
+|12 - 12:15 | Testing 2| | 
+
